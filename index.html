@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bored Ape NFT Collection</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Daily+Bubble&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo" id="lottie-logo"></div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+            <button class="nav-button">Buy</button>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Bored Ape NFT Collection</h1>
+            <p>Discover the exclusive and innovative world of Bored Ape NFTs. Our collection represents the pinnacle of digital artistry and blockchain technology, offering unique assets that redefine digital ownership.</p>
+            <div class="hero-buttons">
+                <button>Explore Collection</button>
+                <button>Get Started</button>
+            </div>
+        </div>
+        <div class="hero-animation" id="lottie-hero"></div>
+    </section>
+      <!-- About Us Section -->
+      <section class="about">
+        <h2>About Us</h2>
+        <div class="about-container">
+            <div class="about-animation">
+                <img src="about.webp" alt="About Us Image" class="about-img">
+            </div>
+            <div class="about-text">
+                <h1>Ape Beyond Time: The Cybernetic Revolution</h1>
+                <p>We are pioneers in the NFT space, committed to providing high-quality, exclusive digital assets. Our Bored Ape collection is a symbol of creativity, innovation, and ownership in the Web3 era.</p>
+                <button>Explore Collection</button>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- NFT Showcase Section -->
+    <section class="meme-section">
+        <h2>Bored Ape NFT Showcase</h2>
+        <div class="meme-container">
+            <div class="meme-card">
+                <img src="meme1.jpg" alt="Bored Ape NFT 1">
+                <h3>Bored Ape #1</h3>
+                <p>A rare and unique NFT from the Bored Ape collection.</p>
+                <button>View Details</button>
+            </div>
+            <div class="meme-card">
+                <img src="meme2.jpg" alt="Bored Ape NFT 2">
+                <h3>Bored Ape #2</h3>
+                <p>One-of-a-kind artwork, secured on the blockchain.</p>
+                <button>View Details</button>
+            </div>
+            <div class="meme-card">
+                <img src="meme3.jpg" alt="Bored Ape NFT 3">
+                <h3>Bored Ape #3</h3>
+                <p>A highly sought-after collectible in the NFT space.</p>
+                <button>View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h3>Disclaimer</h3>
+        <div class="footer-content">
+            <p>This website serves informational purposes only. We do not guarantee financial returns on any NFT purchases.</p>
+            <div class="social-icons">
+                <img src="facebook.png" alt="Facebook">
+                <img src="twitter.png" alt="Twitter">
+                <img src="discord.png" alt="Instagram">
+            </div>
+        </div>
+        <p>© 2025 Bored Ape NFT Collection. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Logo Lottie Animation
+        var logoAnimation = lottie.loadAnimation({
+            container: document.getElementById('lottie-logo'),
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            path: 'logoLotie.json' // Replace with the correct path to your Lottie JSON file
+        });
+
+        // Hero Section Lottie Animation
+        var heroAnimation = lottie.loadAnimation({
+            container: document.getElementById('lottie-hero'),
+            renderer: 'svg',
+            loop: false,
+            autoplay: true,
+            path: 'pic.json' // Replace with the correct path to your Lottie JSON file
+        });
+
+        heroAnimation.addEventListener('complete', function() {
+            heroAnimation.goToAndStop(heroAnimation.totalFrames - 1, true);
+        });
+    </script>
+</body>
+</html>
